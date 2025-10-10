@@ -37,12 +37,12 @@ while True:
 
     if x < 0:
         x = 0
-    if x + margin > 500:
-        x = 500 - margin
+    if x + box_size > 500:
+        x = 500 - box_size
     if y < 0:
         y = 0
-    if y + margin > 500:
-        y = 500 - margin
+    if y + box_size > 500:
+        y = 500 - box_size
 
     screen.fill(color_white)
     pygame.draw.rect(screen, color_black, (x, y, 50, 50))
