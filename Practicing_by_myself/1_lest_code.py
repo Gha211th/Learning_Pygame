@@ -19,7 +19,7 @@ x, y = 50, 50
 speed = 5
 
 # limit space
-box_size = 10
+box_size = 50
 
 # for fps
 clock = pygame.time.Clock()
@@ -38,13 +38,13 @@ while True:
     keys = pygame.key.get_pressed()
 
     # for wasd or row
-    if keys[pygame.K_UP or pygame.K_w]:
+    if keys[pygame.K_UP] or [pygame.K_w]:
         y -= speed
-    if keys[pygame.K_DOWN or pygame.K_s]:
+    if keys[pygame.K_DOWN] or [pygame.K_s]:
         y += speed
-    if keys[pygame.K_RIGHT or pygame.K_d]:
+    if keys[pygame.K_RIGHT] or [pygame.K_d]:
         x += speed
-    if keys[pygame.K_LEFT or pygame.K_a]:
+    if keys[pygame.K_LEFT] or [pygame.K_a]:
         x -= speed
 
 
