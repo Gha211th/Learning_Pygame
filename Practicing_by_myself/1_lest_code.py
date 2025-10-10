@@ -19,11 +19,11 @@ x, y = 50, 50
 speed = 5
 
 # limit space
-box_size = 20
+box_size = 10
 
 # for fps
 clock = pygame.time.Clock()
-fps_target = 120
+fps_target = 300
 
 # starting the game!
 while True:
@@ -56,9 +56,10 @@ while True:
     if y < 0:
         y = 0
     if y + box_size > 500:
-        x = 500 - box_size
+        y = 500 - box_size
+    
     # initialize the window
     screen.fill(color_white)
-    pygame.draw.rect(screen, color_black, (x, y, 20, 20))
+    pygame.draw.rect(screen, color_black, (x, y, 50, 50))
     pygame.display.flip()
     clock.tick(fps_target)
