@@ -12,9 +12,7 @@ pygame.display.set_caption("pacticing my pygame skills")
 
 # for color:
 color_white = (255, 255, 255)
-
-# for player
-player = pygame.image.load("player.png")
+color_black = (0, 0, 255)
 
 # for movement
 x, y = 50, 50
@@ -30,3 +28,8 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+    
+    screen.fill(color_white)
+    pygame.draw.rect(screen, color_black, (x, y, 20, 20))
+    pygame.display.flip()
+    clock.tick(fps_target)
