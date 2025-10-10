@@ -24,11 +24,27 @@ fps_target = 120
 
 # starting the game!
 while True:
+    # to close the window
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
     
+
+    # for movement:
+    keys = pygame.key.get_pressed()
+
+    # for wasd or row
+    if keys[pygame.K_UP or pygame.K_w]:
+        y -= speed
+    if keys[pygame.K_DOWN or pygame.K_s]:
+        y += speed
+    if keys[pygame.K_RIGHT or pygame.K_d]:
+        x += speed
+    if keys[pygame.K_LEFT or pygame.K_a]:
+        x -= speed
+
+    # initialize the window
     screen.fill(color_white)
     pygame.draw.rect(screen, color_black, (x, y, 20, 20))
     pygame.display.flip()
