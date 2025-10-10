@@ -13,8 +13,6 @@ x, y = 10, 15
 speed = 5
 box_size = 50
 
-margin = 10
-
 clock = pygame.time.Clock()
 fps_rate = 120
 
