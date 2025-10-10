@@ -38,13 +38,13 @@ while True:
     keys = pygame.key.get_pressed()
 
     # for wasd or row
-    if keys[pygame.K_UP] or [pygame.K_w]:
+    if keys[pygame.K_UP]:
         y -= speed
-    if keys[pygame.K_DOWN] or [pygame.K_s]:
+    if keys[pygame.K_DOWN]:
         y += speed
-    if keys[pygame.K_RIGHT] or [pygame.K_d]:
+    if keys[pygame.K_RIGHT]:
         x += speed
-    if keys[pygame.K_LEFT] or [pygame.K_a]:
+    if keys[pygame.K_LEFT]:
         x -= speed
 
 
