@@ -1,3 +1,7 @@
+# in over here i just learn how to make a
+# movement using keyboard and give a limit
+# space for move:)
+
 import pygame
 import sys
 
