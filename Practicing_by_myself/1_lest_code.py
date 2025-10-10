@@ -18,6 +18,9 @@ color_black = (0, 0, 255)
 x, y = 50, 50
 speed = 5
 
+# limit space
+box_size = 20
+
 # for fps
 clock = pygame.time.Clock()
 fps_target = 120
@@ -44,6 +47,16 @@ while True:
     if keys[pygame.K_LEFT or pygame.K_a]:
         x -= speed
 
+
+    # limit space
+    if x < 0:
+        x = 0
+    if x + box_size > 500:
+        x = 500 - box_size
+    if y < 0:
+        y = 0
+    if y + box_size > 500:
+        x = 500 - box_size
     # initialize the window
     screen.fill(color_white)
     pygame.draw.rect(screen, color_black, (x, y, 20, 20))
