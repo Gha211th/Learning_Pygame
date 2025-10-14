@@ -23,7 +23,7 @@ box_size = 50
 
 # for fps
 clock = pygame.time.Clock()
-fps_target = 300
+fps_target = 10000
 
 # starting the game!
 while True:
