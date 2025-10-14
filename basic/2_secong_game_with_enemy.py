@@ -21,7 +21,7 @@ player_speed = 5
 enemy_x = 100
 enemy_y = 200
 enemy_size = 50
-enemy_speed = 10
+enemy_speed = 5
 
 # enemy direction
 enemy_direct = 1
@@ -52,14 +52,20 @@ while True:
 
     if player_x < 0:
         player_x = 0
-    if player_x + box_size < 500:
-        x = 500 - box_size
+    if player_x + box_size > 500:
+        player_x = 500 - box_size
     if player_y < 0:
         player_y = 0
-    if player_y + box_size < 500:
-        y = 500 - box_size
+    if player_y + box_size > 500:
+        player_y = 500 - box_size
+
+    enemy_x += enemy_speed * enemy_direct
+
+    if enemy_x <= 0 or enemy_x + enemy_size >= 500:
+        enemy_direct *= -1  
     
     screen.fill(color_white)
     pygame.draw.rect(screen, color_black, (player_x, player_y, player_size, player_size))
+    pygame.draw.rect(screen, color_red, (enemy_x, enemy_y, enemy_size, enemy_size))
     pygame.display.flip()
     clock.tick(fps_target)
