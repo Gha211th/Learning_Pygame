@@ -24,7 +24,7 @@ enemy_size = 50
 enemy_speed = 5
 
 # enemy direction
-enemy_direct = 1
+enemy_direct = 5
 
 # for fps
 clock = pygame.time.Clock()
