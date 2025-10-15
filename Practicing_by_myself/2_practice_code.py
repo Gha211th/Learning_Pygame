@@ -30,3 +30,10 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+    
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_UP]:
+        player_y -= player_speed
+    if keys[pygame.K_DOWN]:
+        player_y += player_speed
+    if keys[pygame.K_RIGHT]:
